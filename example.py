@@ -22,9 +22,9 @@ args = None
 @asyncio.coroutine
 def main(loop, password, ip):
     """Main loop."""
-    session = aiohttp.ClientSession(loop=loop)
-    sma = pysma.SMA(session, ip, password=password,
-                    group=pysma.GROUP_INSTALLER)
+    connector = aiohttp.TCPConnector(verify_ssl=False)
+    session = aiohttp.ClientSession(loop=loop, connector=connector)
+    sma = pysma.SMA(session, ip, password=password)
     yield from sma.new_session()
     _LOGGER.info("NEW SID: %s", sma._sma_sid)
 

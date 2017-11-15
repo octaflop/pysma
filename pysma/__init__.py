@@ -20,9 +20,9 @@ KEY_CURRENT_CONSUMPTION_W = '6100_00543100'
 KEY_TOTAL_YIELD_KWH = '6400_00260100'
 KEY_TOTAL_CONSUMPTION_KWH = '6400_00543A00'
 
-URL_LOGIN = "http://{}/dyn/login.json"
-URL_LOGOUT = "http://{}/dyn/logout.json"
-URL_VALUES = "http://{}/dyn/getValues.json"
+URL_LOGIN = "https://{}/dyn/login.json"
+URL_LOGOUT = "https://{}/dyn/logout.json"
+URL_VALUES = "https://{}/dyn/getValues.json"
 
 
 class SMA:
